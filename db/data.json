@@ -1,0 +1,74 @@
+{
+  "sellers": [
+    {
+      "seller_id": 1,
+      "email": "seller3@example.com",
+      "password": "password3",
+      "store_name": "Store 3"
+    }
+  ],
+  "customers": [
+    {
+      "customer_id": 1,
+      "email": "customer3@example.com",
+      "password": "password3"
+    },
+    {
+      "customer_id": 2,
+      "email": "customer4@example.com",
+      "password": "password4"
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1,
+      "title": "Product 3",
+      "description": "Description 3",
+      "price": 20.99,
+      "quantity": 75,
+      "image": "image3.jpg",
+      "manufacturing_cost": 12.99
+    },
+    {
+      "product_id": 2,
+      "title": "Product 4",
+      "description": "Description 4",
+      "price": 25.99,
+      "quantity": 40,
+      "image": "image4.jpg",
+      "manufacturing_cost": 15.99
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 1,
+      "customer_id": 1,
+      "shipment_id": 1,
+      "total_amount": 50.99
+    },
+    { "order_id": 2, "customer_id": 2, "shipment_id": 2, "total_amount": 45.99 }
+  ],
+  "order_items": [
+    { "order_item_id": 1, "order_id": 1, "product_id": 1, "quantity": 2 },
+    { "order_item_id": 2, "order_id": 1, "product_id": 2, "quantity": 1 },
+    { "order_item_id": 3, "order_id": 2, "product_id": 2, "quantity": 3 }
+  ],
+  "shipments": [
+    {
+      "shipment_id": 1,
+      "order_id": 1,
+      "carrier": "Carrier 1",
+      "tracking_number": "987654321",
+      "shipment_date": "2024-03-20",
+      "delivery_date": "2024-03-23"
+    },
+    {
+      "shipment_id": 2,
+      "order_id": 2,
+      "carrier": "Carrier 2",
+      "tracking_number": "123456789",
+      "shipment_date": "2024-03-22",
+      "delivery_date": "2024-03-25"
+    }
+  ]
+}

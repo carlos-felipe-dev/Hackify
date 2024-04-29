@@ -1,13 +1,15 @@
 require("dotenv").config();
+require("dotenv").config();
 
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const { Pool } = require("pg");
 const jwt = require("jsonwebtoken");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
+const { db } = require("../db");
+const { Pool } = require("pg");
 
 // const port = process.env.POSTGRES_PORT;
 
@@ -172,6 +174,8 @@ app.post("/car", async (req, res) => {
     console.log(car);
     res.json(car);
   } catch (err) {
+    console.log("Error: ", err);
+    res.json({ err, success: false });
     console.log("Error: ", err);
     res.json({ err, success: false });
   }
